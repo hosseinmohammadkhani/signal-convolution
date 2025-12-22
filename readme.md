@@ -7,3 +7,29 @@ This function simply applies discrete convolution formula on x and h signals, if
 ### apply_gaussian_filter(signal, sigma) <br>
 The primary purpose of this function is to smooth a discrete signal. Using kernel of Gaussian formula, radius and sigma determine how far from the center samples are kept. Radius=3σ is being used because keeping values within ±3σ keeps 99.7% of the Gaussian’s total energy(mass).<br>
 In the range of (-radius , radius) values are being calculated and stored in gaussian_signal_kernel list using kernel of Gaussian. After normalization, Gaussian filter will be applied to the input signal by convolve function.
+
+
+## Installation
+
+1-Clone the repository:
+```bash
+git clone https://github.com/hosseinmohammadkhani/signal-convolution.git
+cd signal-convolution
+```
+
+2-Create virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate # Linux/macOS
+venv\Scripts\activate # Windows
+```
+
+3-Install requirements
+```bash
+pip install -r requirements.txt
+```
+
+4-Run the app
+```bash
+python -m streamlit run app.py
+```
