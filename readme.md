@@ -8,6 +8,8 @@ This function simply applies discrete convolution formula on x and h signals, if
 The primary purpose of this function is to smooth a discrete signal. Using kernel of Gaussian formula, radius and sigma determine how far from the center samples are kept. Radius=3σ is being used because keeping values within ±3σ keeps 99.7% of the Gaussian’s total energy(mass).<br>
 In the range of (-radius , radius) values are being calculated and stored in gaussian_signal_kernel list using kernel of Gaussian. After normalization, Gaussian filter will be applied to the input signal by convolve function.
 
+## Plot the results
+When using ax.stem(result_signal) from matplotlib library, each element of the list (signal values) will be treated as y-values and [0, 1, 2, ...] will be generated as x-values automatically.
 
 ## Installation
 
