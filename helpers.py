@@ -90,9 +90,9 @@ def convert_image_to_matrix(path):
     resized_img = gray_img.resize((512, 512))
 
     # Convert to 2D matrix
-    image_matrix = list(resized_img.getdata())
+    image_matrix_list = list(resized_img.getdata())
     image_matrix = [
-        image_matrix[i * 512:(i + 1) * 512]
+        image_matrix_list[i * 512:(i + 1) * 512]
         for i in range(512)
     ]
 
