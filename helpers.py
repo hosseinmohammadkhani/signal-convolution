@@ -100,10 +100,13 @@ def convert_image_to_matrix(path):
 
 
 def apply_gaussian_filter_on_image(input_signal , sigma=1.0):
+    
+    # Matrix initialization
     radius = 2
-    kernel = []
     total = 0.0
+    kernel = []
 
+    # 2D Gaussian formula
     for i in range(-radius, radius + 1):
         row = []
         for j in range(-radius, radius + 1):
